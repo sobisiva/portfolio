@@ -1,0 +1,203 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Main Content */
+.main-content {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #000; /* Black background for main content */
+    position: relative; /* For positioning diagonal lines */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Main Content Container */
+.container {
+    width: 80%; /* Adjust width to your preference */
+    max-width: 1200px; /* Set a maximum width for larger screens */
+    background-color: #1c1c1c; /* Slightly different background to differentiate it */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center the text */
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000; /* Black main page background */
+}
+
+/* Decorative Lines for Main Page */
+.line {
+    position: absolute;
+    border: 2px solid  #FFCC00; /* Color for the lines */
+    z-index: -1; /* Ensure lines are behind the content */
+}
+
+.line-top-left {
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    transform: rotate(45deg);
+}
+
+.line-bottom-right {
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    transform: rotate(45deg);
+}
+
+/* Sidebar (Taskbar) */
+.sidebar {
+    width: 300px;
+    background-color: #2b2b2b; /* Dark gray taskbar */
+    color:  #FFCC00;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Circle-shaped profile picture */
+    margin-bottom: 15px;
+    object-fit: cover;
+    border: 5px solid #fff; /* White border for contrast */
+}
+
+.profile-info h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.profile-info h2 {
+    font-size: 18px;
+    color:  #FFCC00;
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.nav-links li {
+    margin: 15px 0;
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 35px; /* Space for icon */
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a i {
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+    color: #ccc;
+}
+
+.nav-links a:hover {
+    color: #f0f0f0;
+    padding-left: 10px;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Black background for main content */
+    transition: transform 0.3s ease; /* Smooth transition for AJAX */
+    border-radius: 10px;
+    position: relative;
+    height: 100vh; /* Ensure it takes the full height of the viewport */
+    text-align: center;
+}
+
+.home-content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.home-content h1 {
+    font-size: 36px;
+}
+
+.home-content h2 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.home-buttons {
+    margin-top: 30px;
+}
+ 
+
+.btn {
+    padding: 12px 25px;
+    background-color: #FFCC00;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 25px;
+    margin: 10px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 2px solid #FFCC00;
+    color: #FFCC00;
+}
+
+/* Diagonal line design */
+.main-content:before, .main-content:after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 10px solid #FFCC00;
+}
+
+.main-content:before {
+    top: 20px;
+    right: 20px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.main-content:after {
+    bottom: 20px;
+    left: 20px;
+    border-right: none;
+    border-top: none;
+}

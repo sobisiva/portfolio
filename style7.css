@@ -1,0 +1,214 @@
+.contact-form-container {
+    background-color: #2b2b2b;
+    padding: 30px;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    color: white;
+}
+
+.contact-form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #FFCC00;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #FFCC00;
+    outline: none;
+}
+
+.btn {
+    background-color: #FFCC00;
+    color: black;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 2px solid #FFCC00;
+    color: #FFCC00;
+}
+
+/* Diagonal line design */
+.main-content:before, .main-content:after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 10px solid #FFCC00;
+}
+
+.main-content:before {
+    top: 20px;
+    right: 20px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.main-content:after {
+    bottom: 20px;
+    left: 20px;
+    border-right: none;
+    border-top: none;
+}
+/* Sidebar (Taskbar) */
+.sidebar {
+    width: 300px;
+    background-color: #2b2b2b; /* Dark gray taskbar */
+    color:  #FFCC00;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Circle-shaped profile picture */
+    margin-bottom: 15px;
+    object-fit: cover;
+    border: 5px solid #fff; /* White border for contrast */
+}
+
+.profile-info h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.profile-info h2 {
+    font-size: 18px;
+    color:  #FFCC00;
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.nav-links li {
+    margin: 15px 0;
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 35px; /* Space for icon */
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a i {
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+    color: #ccc;
+}
+
+.nav-links a:hover {
+    color: #f0f0f0;
+    padding-left: 10px;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Black background for main content */
+    transition: transform 0.3s ease; /* Smooth transition for AJAX */
+    border-radius: 10px;
+    position: relative;
+    height: 100vh; /* Ensure it takes the full height of the viewport */
+    text-align: center;
+}
+
+.home-content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.home-content h1 {
+    font-size: 36px;
+}
+
+.home-content h2 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.home-buttons {
+    margin-top: 30px;
+}
+ 
+
+.btn {
+    padding: 12px 25px;
+    background-color: #FFCC00;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 25px;
+    margin: 10px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 2px solid #FFCC00;
+    color: #FFCC00;
+}
+
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000; /* Black main page background */
+}

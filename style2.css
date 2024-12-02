@@ -1,0 +1,221 @@
+/* About Me Page */
+.about-me {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background-color: #2b2b2b; /* Dark gray background for about me section */
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%; /* Adjust width to fit content properly */
+    max-width: 1000px;
+    margin: 0 auto; /* Center the section */
+}
+
+.about-me img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    margin-right: 20px; /* Space between image and text */
+    border: 2px solid #FFCC00; /* Yellow border for contrast */
+}
+
+.about-me-text {
+    border: 1px solid #FFCC00; /* Border around text */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #1c1c1c; /* Darker background for text area */
+    color: white;
+}
+
+.about-me-text h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-me-text p {
+    margin-bottom: 10px;
+    line-height: 1.6; /* Better line spacing */
+}
+
+/* Larger profile picture for about-me section */
+.profile-pic-about-me {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px; /* Square image with rounded corners */
+    margin-right: 30px;
+    object-fit: cover;
+    border: 2px solid #FFCC00; /* Yellow border for contrast */
+}
+
+/* Active link in the sidebar */
+.nav-links a.active {
+    color: #FFCC00; /* Yellow color for active link */
+    font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Centering the content horizontally */
+    align-items: center; /* Align content to the center vertically */
+    background-color: #000; /* Black background for main content */
+    position: relative;
+    height: 100vh; /* Ensure full height of the viewport */
+    text-align: center;
+}
+/* Sidebar (Taskbar) */
+.sidebar {
+    width: 300px;
+    background-color: #2b2b2b; /* Dark gray taskbar */
+    color:  #FFCC00;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Circle-shaped profile picture */
+    margin-bottom: 15px;
+    object-fit: cover;
+    border: 5px solid #fff; /* White border for contrast */
+}
+
+.profile-info h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.profile-info h2 {
+    font-size: 18px;
+    color:  #FFCC00;
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.nav-links li {
+    margin: 15px 0;
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 35px; /* Space for icon */
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a i {
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+    color: #ccc;
+}
+
+.nav-links a:hover {
+    color: #f0f0f0;
+    padding-left: 10px;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Black background for main content */
+    transition: transform 0.3s ease; /* Smooth transition for AJAX */
+    border-radius: 10px;
+    position: relative;
+    height: 100vh; /* Ensure it takes the full height of the viewport */
+    text-align: center;
+}
+
+.home-content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.home-content h1 {
+    font-size: 36px;
+}
+
+.home-content h2 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.home-buttons {
+    margin-top: 30px;
+}
+ 
+
+.btn {
+    padding: 12px 25px;
+    background-color: #FFCC00;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 25px;
+    margin: 10px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 2px solid #FFCC00;
+    color: #FFCC00;
+}
+
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000; /* Black main page background */
+}
+
+/* Diagonal line design */
+.main-content:before, .main-content:after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 10px solid #FFCC00;
+}
+
+.main-content:before {
+    top: 20px;
+    right: 20px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.main-content:after {
+    bottom: 20px;
+    left: 20px;
+    border-right: none;
+    border-top: none;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOBIYA - Software Developer</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     
+</head>
+
+<body>
+
+    <!-- Sidebar (Taskbar) -->
+    <div class="sidebar">
+        <div class="profile-info">
+            <img src="img.jpg" alt="Sobiya's Picture" class="profile-pic">
+            <h1>SOBIYA</h1>
+            <h2>Web Developer</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html" onclick="loadContent('home')"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="about.html" onclick="loadContent('about')"><i class="fas fa-user"></i>About Me</a></li>
+            <li><a href="projects.html"><i class="fas fa-folder"></i>Projects</a></li>
+            <li><a href="skills.html"><i class="fas fa-code"></i>Skills</a></li>
+            <li><a href="education.html"><i class="fas fa-graduation-cap"></i>Education</a></li>
+            <li><a href="certificates.html"><i class="fas fa-certificate"></i>Certificates</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="home-content">
+                <h1>Hi, I'm Sobiya K</h1>
+                <h2>I am a web Developer</h2>
+                <div class="home-buttons">
+                    <a href="file:///C:/Users/USER/Downloads/Sobiya_resume%20(1).pdf" class="btn" target="_blank">Resume</a>
+                    <a href="https://github.com" class="btn" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/sobiyakamaraj" class="btn" target="_blank">LinkedIn</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Function to load content for different pages
+        function loadContent(page) {
+            const mainContent = document.getElementById('main-content');
+            mainContent.style.transform = 'translateX(-300px)'; // Shift to the left 
+
+            setTimeout(() => {
+                let content = '';
+
+                if (page === 'home') {
+                    content = `  
+                        <div class="home-content">
+                            <h1>Hi, I'm Sobiya K</h1>
+                            <h2>I am a Software Developer</h2>
+                            <div class="home-buttons">
+                                <a href="resume_link.pdf" class="btn" target="_blank">Resume</a>
+                                <a href="https://github.com/sobisiva" class="btn" target="_blank">GitHub</a>
+                                <a href="https://www.linkedin.com/in/yourusername" class="btn" target="_blank">LinkedIn</a>
+                            </div>
+                        </div>`;
+                }
+
+                mainContent.innerHTML = content;
+                mainContent.style.transform = 'translateX(0)'; // Slide content back in
+            }, 300); // Delay for smooth transition
+        }
+    </script>
+
+</body>
+
+</html>

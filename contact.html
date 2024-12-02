@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - SOBIYA</title>
+    <link rel="stylesheet" href="style7.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Sidebar (Taskbar) -->
+    <div class="sidebar">
+        <div class="profile-info">
+            <img src="img.jpg" alt="Sobiya's Picture" class="profile-pic">
+            <h1>SOBIYA</h1>
+            <h2>Web Developer</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i>About Me</a></li>
+            <li><a href="projects.html"><i class="fas fa-folder"></i>Projects</a></li>
+            <li><a href="skills.html"><i class="fas fa-code"></i>Skills</a></li>
+            <li><a href="education.html"><i class="fas fa-graduation-cap"></i>Education</a></li>
+            <li><a href="certificates.html"><i class="fas fa-certificate"></i>Certificates</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Contact Me Section -->
+    <div class="main-content">
+        <div class="contact-form-container">
+            <h1>Contact Me</h1>
+            <!-- Updated field names to match template fields -->
+            <form id="contact-form">
+                <div class="input-group">
+                    <label for="from_name">Name:</label>
+                    <input type="text" id="from_name" name="from_name" required>
+                </div>
+                <div class="input-group">
+                    <label for="from_email">Email:</label>
+                    <input type="email" id="from_email" name="from_email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message_html">Message:</label>
+                    <textarea id="message_html" name="message_html" rows="5" required></textarea>
+                </div>
+                <div class="input-group">
+                    <button type="submit" class="btn">Send Message</button>
+                </div>
+            </form>
+
+            <!-- Div to display status messages -->
+            <div id="status-message"></div>
+        </div>
+    </div>
+
+    <!-- Load EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+
+    <!-- EmailJS Script -->
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("hzsaAhZMRiGyteFxd"); // Replace with your EmailJS public key
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Send form via EmailJS
+            emailjs.sendForm('service_91dlpio', 'template_0srnips', this)
+                .then(function(response) {
+                    console.log("SUCCESS!", response.status, response.text);
+                    document.getElementById("status-message").innerHTML = "Message sent successfully!";
+                    document.getElementById("status-message").style.color = "green";
+                }, function(error) {
+                    console.log("FAILED...", error);
+                    document.getElementById("status-message").innerHTML = "Failed to send message. Error: " + JSON.stringify(error);
+                    document.getElementById("status-message").style.color = "red";
+                });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background */
+    color: white;
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar (Taskbar) Styling */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+}
+
+.profile-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #FFCC00;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-links li {
+    margin: 15px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links i {
+    margin-right: 10px;
+}
+
+/* Main Content Centered */
+.main-content {
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(100vw - 250px);
+    background-color: #000;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+/* Certificate Box (Horizontal Rectangle) */
+.certificate-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Container */
+.logo-container {
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.circle-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #FFCC00;
+    object-fit: cover;
+}
+
+/* Certificate Info */
+.certificate-info {
+    flex-grow: 1;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+/* Certificate Title */
+.certificate-info h2 {
+    font-size: 22px;
+    color: #FFCC00;
+}
+
+/* Institution and Period */
+.certificate-info h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Bullet Points */
+.certificate-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.certificate-info ul li {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+/* Details Right Section */
+.details-right {
+    margin-left: auto;
+    text-align: right;
+}
+
+/* Button */
+.btn {
+    padding: 10px 20px;
+    background-color: #FFCC00;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 2px solid #FFCC00;
+    color: #FFCC00;
+}
+
+/* Scrollbar Styling */
+.main-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: #1c1c1c;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background-color: #FFCC00;
+    border-radius: 6px;
+}
+/* Diagonal line design */
+.main-content:before, .main-content:after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 10px solid #FFCC00;
+    pointer-events: none; /* Ensures the lines don't block interaction */
+}
+
+/* Top right diagonal line */
+.main-content:before {
+    top: 20px;  /* Adjust to be slightly below the top */
+    right: 20px; /* Adjust to the very right */
+    border-left: none;
+    border-bottom: none;
+    padding-bottom: 10px;
+}
+
+/* Bottom left diagonal line */
+.main-content:after {
+    border-right: none;
+    border-top: none;
+    position: absolute;
+    bottom: -125px;  /* Move it below the full content */
+    left: 20px;
+}
+
+/* Ensure the content area is scrollable and allows the diagonal line to follow */
+.main-content {
+    position: relative;
+    padding: 40px;       /* Add padding for diagonal line clearance */
+    min-height: 100vh;   /* Ensure it takes full height for scrollable content */
+    box-sizing: border-box;
+}
+
